@@ -25,6 +25,7 @@ In case of a locally stored file, it's necessary to change the values for `LOCAL
 
 By default, the `LOCAL_ROOT` env variable in the `.env` file is set to `/tmp/airbyte_local`.
 Also, by default, this volume is mounted from `/tmp/airbyte_local` on the host machine (my system).
+Also, you need to navigate to this local folder on the filesystem of the machine running the Airbyte deployment to retrieve the local data files.
 
 The local mount is mounted by Docker onto `LOCAL_ROOT`. This means the `/local` is substituted by `/tmp/airbyte_local` by default.
 
@@ -37,5 +38,8 @@ This is because, If you setup a pipeline using one of the local File based desti
 - Change `HACK_LOCAL_ROOT_PARENT`  in the `.env` file to the parectory directory of the above directory.
 - In **Airbyte**, under `Sources` the location would be `/local/<filename>.csv`
 
-So you need to navigate to this local folder on the filesystem of the machine running the Airbyte deployment to retrieve the local data files.
 
+# Appendix
+Local files integration documentation (for destinations; missing docs for source):
+- CSV: https://github.com/airbytehq/airbyte/blob/master/docs/integrations/destinations/csv.md
+- JSON: https://github.com/airbytehq/airbyte/blob/master/docs/integrations/destinations/local-json.md
