@@ -70,24 +70,25 @@ srcdata     |keywords  |_airbyte_keywords_hashid|text                    |      
 ```
 table_schema|table_name|column_name           |data_type               |character_maximum_length|column_default|is_nullable|
 ------------+----------+----------------------+------------------------+------------------------+--------------+-----------+
-srcdata     |links     |_airbyte_normalized_at|timestamp with time zone|                        |              |YES        |
-srcdata     |links     |_airbyte_emitted_at   |timestamp with time zone|                        |              |YES        |
 srcdata     |links     |movieid               |text                    |                        |              |YES        |
-srcdata     |links     |tmdbid                |text                    |                        |              |YES        |
-srcdata     |links     |_airbyte_links_hashid |text                    |                        |              |YES        |
-srcdata     |links     |_airbyte_ab_id        |character varying       |                        |              |YES        |
 srcdata     |links     |imdbid                |text                    |                        |              |YES        |
+srcdata     |links     |tmdbid                |text                    |                        |              |YES        |
+srcdata     |links     |_airbyte_ab_id        |character varying       |                        |              |YES        |
+srcdata     |links     |_airbyte_emitted_at   |timestamp with time zone|                        |              |YES        |
+srcdata     |links     |_airbyte_normalized_at|timestamp with time zone|                        |              |YES        |
+srcdata     |links     |_airbyte_links_hashid |text                    |                        |              |YES        |
 ```
 
 ## Movies_metadata
 ```
 table_schema|table_name     |column_name                    |data_type               |character_maximum_length|column_default|is_nullable|
 ------------+---------------+-------------------------------+------------------------+------------------------+--------------+-----------+
-srcdata     |movies_metadata|original_title                 |text                    |                        |              |YES        |
+srcdata     |movies_metadata|id                             |text                    |                        |              |YES        |
 srcdata     |movies_metadata|imdb_id                        |text                    |                        |              |YES        |
+srcdata     |movies_metadata|title                          |text                    |                        |              |YES        |
+srcdata     |movies_metadata|original_title                 |text                    |                        |              |YES        |
 srcdata     |movies_metadata|runtime                        |text                    |                        |              |YES        |
 srcdata     |movies_metadata|video                          |text                    |                        |              |YES        |
-srcdata     |movies_metadata|title                          |text                    |                        |              |YES        |
 srcdata     |movies_metadata|poster_path                    |text                    |                        |              |YES        |
 srcdata     |movies_metadata|spoken_languages               |text                    |                        |              |YES        |
 srcdata     |movies_metadata|revenue                        |text                    |                        |              |YES        |
@@ -99,7 +100,6 @@ srcdata     |movies_metadata|vote_average                   |text               
 srcdata     |movies_metadata|production_countries           |text                    |                        |              |YES        |
 srcdata     |movies_metadata|belongs_to_collection          |text                    |                        |              |YES        |
 srcdata     |movies_metadata|tagline                        |text                    |                        |              |YES        |
-srcdata     |movies_metadata|id                             |text                    |                        |              |YES        |
 srcdata     |movies_metadata|adult                          |text                    |                        |              |YES        |
 srcdata     |movies_metadata|vote_count                     |text                    |                        |              |YES        |
 srcdata     |movies_metadata|budget                         |text                    |                        |              |YES        |
