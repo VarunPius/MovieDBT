@@ -1,3 +1,6 @@
+# Temporary Mac files
+.DS_Store
+
 # DBT Directories
 target/
 dbt_packages/
